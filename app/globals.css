@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f9f9f9;
+  --color-surface-dim: #dadada;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f4;
+  --color-surface-container: #eeeeee;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #4c4546;
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+  --color-secondary: #bc0100;
+  --color-on-secondary: #ffffff;
+  --color-accent-pink: #fee2e2;
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-display);
+
+  --spacing-stack-xs: 4px;
+  --spacing-stack-sm: 12px;
+  --spacing-stack-md: 24px;
+  --spacing-stack-lg: 48px;
+  --spacing-stack-xl: 80px;
+  --spacing-grid-margin: 40px;
+  --spacing-grid-gutter: 1px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-primary font-sans;
+  }
+}
+
+@layer utilities {
+  .brutalist-border {
+    @apply border-2 border-primary;
+  }
+  .grid-bg {
+    background-size: 100px 100px;
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  }
+}
+
+/* Brutalist Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f9f9f9; border-left: 2px solid #000000; }
+::-webkit-scrollbar-thumb { background: #000000; }
